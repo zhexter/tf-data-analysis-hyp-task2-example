@@ -10,6 +10,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     #p_value = MMD(compute_kernel="laplacian", gamma=1).test(x, y)[1]
-    p_value = sps.anderson_ksamp([x, y]).pvalue
+    p_value = sps.anderson_ksamp([x, y])[1]
     alpha = 0.06
     return p_value < alpha # Ваш ответ, True или False
